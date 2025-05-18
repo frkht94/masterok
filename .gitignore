@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+local_settings.py
+db.sqlite3
+/migrations
+
+# IDEs and Editors
+.idea/
+.vscode/
+*.swp
+*~
+tmp/
+tmp.*
+temp/
+temp.*
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Dependencies
+/node_modules
+/bower_components
+
+# Secrets
+.env
+
+# Database
+*.psqlhistory
+*.sql
+
+# Packages
+dist/
+build/
+*.egg-info/
+
+# Logs
+*.log
+
+*.json
+!settings.json 
