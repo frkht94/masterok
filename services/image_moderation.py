@@ -1,6 +1,10 @@
 import requests
+import os
+from dotenv import load_dotenv
 
-MODERATECONTENT_API_KEY = "afa77977-0cb9-4d73-b2be-7f1b2d5331a0"  # Замени на свой API-ключ
+load_dotenv()
+
+MODERATECONTENT_API_KEY = os.getenv("MODERATECONTENT_API_KEY")
 
 def is_inappropriate_image_by_url(image_url: str) -> bool:
     try:
@@ -13,4 +17,4 @@ def is_inappropriate_image_by_url(image_url: str) -> bool:
         return rating in ["adult", "racy", "violent"]
     except Exception as e:
         print("Moderation API error:", e)
-        return False  # По умолчанию считаем изображение безопасным
+        return False  # безопасно по умолчанию
